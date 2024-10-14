@@ -1,0 +1,16 @@
+age = int(input("Enter age: "))
+systolic = int(input("Enter systolic blood pressure: "))
+diastolic = int(input("Enter diastolic blood pressure: "))
+def normal_blood_pressure(age, systolic, diastolic):
+    if age < 40:
+        normal_systolic, normal_diastolic = 130, 85
+    elif 40 <= age < 60:
+        normal_systolic, normal_diastolic = 130, 85
+    else:
+        normal_systolic, normal_diastolic = 140, 90
+    if systolic <= normal_systolic and diastolic <= normal_diastolic:
+        return "Blood pressure is normal."
+    else:
+        return "Blood pressure is high."
+
+print(normal_blood_pressure(age, systolic, diastolic))
